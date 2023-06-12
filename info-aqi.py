@@ -124,9 +124,11 @@ def get_level(aqi: int):
 
 
 parser = argparse.ArgumentParser(prog="info-aqi",
-                                 description=("Get Air quality information of a specific location"))
+                                 description=("Get Air quality information of"
+                                              " a specific location"))
 parser.add_argument("-l", "--location",
-                    help="The location you want to query the air quality information from.")
+                    help="The location you want to query the air quality "
+                    "information from.")
 parser.add_argument(
     "-t", "--token", help="Your API token for waqi.info.", required=True)
 args = parser.parse_args()
@@ -141,7 +143,8 @@ if not args.location:
 else:
     location = args.location
 
-api_url = "https://api.waqi.info/feed/{}/?token={}".format(location, args.token)
+token = args.token
+api_url = "https://api.waqi.info/feed/{}/?token={}".format(location, token)
 with urllib.request.urlopen(api_url) as url:
     jsondata = json.load(url)
     data = jsondata["data"]
