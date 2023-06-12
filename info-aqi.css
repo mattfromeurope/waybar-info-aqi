@@ -1,0 +1,26 @@
+#custom-aqi {}
+
+#custom-aqi.good {
+    background-color: #B9FF72;
+}
+
+#custom-aqi.moderate {
+    background-color: #F3F300;
+}
+
+#custom-aqi.sensitive {
+    background-color: #FF8E1C;
+}
+
+#custom-aqi.unhealthy {
+    background-color: #FF8888;
+}
+
+#custom-aqi.veryUnhealthy {
+    background-color: #C994FF;
+}
+
+#custom-aqi.hazardous {
+    background-color: #B00058;
+    color: #FFFFFF;
+}

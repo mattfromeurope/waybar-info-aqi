@@ -1,0 +1,10 @@
+{
+    "custom/aqi": {
+        "exec": "info-aqi.py -t <YOUR-API-TOKEN>",
+        "return-type": "json",
+        "restart-interval": 600,
+        "format": "{}",
+        "tooltip": true
+    }
+}
+
